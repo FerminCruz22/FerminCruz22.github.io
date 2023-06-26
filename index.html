@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>VARO</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Mukta:wght@200&family=Schibsted+Grotesk&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="index.css">
+</head>
+
+<body>
+  <div id="sidemenu" class="menu-collapsed">
+    <!--         Menu Header -->
+    <div id="header">
+
+      <div id="menu-btn">
+        <div class="btn-hamburger"></div>
+        <div class="btn-hamburger"></div>
+        <div class="btn-hamburger"></div>
+      </div>
+    </div>
+    <!--         Perfil -->
+    <div id="profile">
+      <div id="photo"><img src="https://i.ibb.co/Db2vgKX/usuario-1.png" alt=""></div>
+      <div id="name"><span>Juan Mendoza</span></div>
+    </div>
+    <!--         Item  1 -->
+    <div id="menu-items">
+      <div class="item">
+        <a href="#">
+          <div class="icon"><input onclick="window.location.href='historial.html'" type="image" src="https://i.ibb.co/Pm08sfX/expediente.png" width="90%"></div>
+          <div class="title" onclick="window.location.href='historial.html'">Historial de viajes</div>
+        </a>
+      </div>
+      <div class="item separator">
+      </div>
+      <div class="item">
+        <a href="#">
+          <div class="icon"><input onclick="window.location.href='rutas.html'" type="image" src="https://i.ibb.co/41q053b/ruta.png" width="90%"></div>
+          <div class="title" onclick="window.location.href='rutas.html'">Rutas</div>
+        </a>
+      </div>
+      <div class="item separator">
+      </div>
+      <div class="item">
+        <a href="#">
+          <div class="icon"><img src="https://i.ibb.co/1XLLz2S/usuario.png" width="50%"></div>
+          <div class="title"><b>Editar perfil</b></div>
+        </a>
+      </div>
+      <!--         Esto es un separador -->
+      <div class="item separator">
+
+      </div>
+      <!--         Item  2 -->
+      <div class="item">
+        <a href="#">
+          <div class="icon"><img src="https://i.ibb.co/09Tm219/ajuste.png" width="50%"></div>
+          <div class="title"><b>Ajustes<br></div>
+        </a>
+      </div>
+      <div class="item separator">
+
+      </div>
+    </div>
+  </div>
+
+  <div id="main-container">
+    <header>
+      <img id="logSP" src="https://i.ibb.co/0Kj2cQF/logoVaro.jpg" alt="logoVARO" border="0">
+      <content id="main">
+  </div>
+  <div>
+    <br>
+    <br>
+    <p>centro </p>
+    <div class="container">
+      <div class="card">
+        <span class="money">Saldo disponible</span>
+        <!-- <span class="owner">VARO</span> -->
+        <span class="number">$50.00</span>
+        <span><input class="recarga" type="button" value="Recargar" name="recarga" id="abrirModal"></span>
+
+      </div>
+    </div>
+
+
+    <input class="bMenu" type="button" value="recarga" name="recarga" id="abrirModal">
+    <dialog id="modal">
+      <div>
+        <span><input onclick="window.location.href='spei.html'" type="button" class="spei"
+            value="Transferencia bancaria (CLABE)" name="spei"></span>
+        <br>
+        <span><input type="button" class="oxxo" value="OXXO" name="oxxo"></span>
+        <br>
+        <span><input type="button" class="cerrar" value="volver" name="cerrar" id="btncerrar"></span>
+      </div>
+    </dialog>
+    </content>
+
+
+  </div>
+  <script>
+    const btn = document.querySelector('#menu-btn');
+    const menu = document.querySelector('#sidemenu');
+    btn.addEventListener('click', e => {
+      menu.classList.toggle("menu-expanded");
+      menu.classList.toggle("menu-collapsed");
+
+      document.querySelector('body').classList.toggle('body-expanded');
+    });
+
+    const btnAbrirModal = document.querySelector("#abrirModal");
+    const btnCerrarModal = document.querySelector("#btncerrar");
+    const modal = document.querySelector("#modal");
+
+    btnAbrirModal.addEventListener("click", () => {
+      modal.showModal();
+    });
+
+    btnCerrarModal.addEventListener("click", () => {
+      modal.close();
+    });
+
+
+    document.addEventListener("DOMContentLoaded", function () {
+      const menuBtn = document.getElementById("menu-btn");
+      const card = document.querySelector(".card");
+
+      menuBtn.addEventListener("click", function () {
+        card.classList.toggle("menu-expanded");
+      });
+    });
+
+  </script>
+</body>
+
+</html>

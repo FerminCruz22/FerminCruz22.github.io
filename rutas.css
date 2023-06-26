@@ -1,0 +1,67 @@
+body {
+    width: 100%;
+    height: 100%;
+    background-color: whitesmoke;
+    font-size: 18px;
+    font-family: 'Mukta', sans-serif;
+    font-family: 'Schibsted Grotesk', sans-serif;
+    padding: 0;
+    margin: 0;
+    margin-left: var(--width-collapsed);
+}
+
+.card {
+    width: 200px;
+    height: 200px;
+    border-radius: 10px;
+    background: #000000;
+    position: absolute;
+    left: 50%;
+    bottom: -30%;
+    transform: translate(-50%, -50%);
+}
+
+.atras {
+    position: absolute;
+    height: 50px;
+    width: 50px;
+    top: 5%;
+    left: 8%;
+}
+
+.help {
+    position: absolute;
+    height: 50px;
+    width: 50px;
+    top: 5%;
+    right: 5%;
+}
+
+.cont {
+    position: absolute;
+    left: 20px;
+}
+
+
+
+@media (max-width: 199px) {
+    .card {
+        width: 200px;
+        height: 300px;
+        left: 50%;
+        bottom: 0;
+        transform: translate(-50%, 0);
+    }
+
+    .atras,
+    .help {
+        position: static;
+        display: block;
+        margin: 10px auto;
+    }
+
+    .cont {
+        position: static;
+        margin-left: 20px;
+    }
+}
